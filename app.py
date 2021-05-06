@@ -137,8 +137,6 @@ def delete(plant_id):
 
         # TODO: Make a `delete_one` database call to delete the plant with the given
         # id.
-        # plant_to_delete = mongo.db.plants.find_one({'_id': ObjectId(plant_id)})
-        # print("-------------------------->>>>>>>>>>>>>>>>>>>>>>>", plant_to_delete)
         mongo.db.plants.delete_one({'_id': ObjectId(plant_id)})
 
         # TODO: Also, make a `delete_many` database call to delete all harvests with
